@@ -1,106 +1,112 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
-      rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" href="https://www.gstatic.com/images/branding/product/2x/contacts_2022_48dp.png"/>
-    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://www.gstatic.com/images/branding/product/2x/contacts_2022_48dp.png"
+    />
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
     <title>Google Contacts</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="nav__list">
-        <div class="nav__hamburger">  
-            <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
-                fill="#000"
-                fill-rule="evenodd"/>
-            </svg>
+      <div class="nav__list-left">
+        <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
+            fill="#000"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <img
+          src="./asset/pictures/contacts_2022_48dp.png"
+          alt="google-icon "
+          class="google__icon"
+        />
+        <p class="page-title">Contacts</p>
+      </div>
+
+      <div class="nav__list-search">
+        <input type="text" id="name-research" placeholder="search" />
+      </div>
+    </nav>
+
+    <main class="option-container">
+      <div class="option-container-left">
+        <div class="option_btn_register">
+          <button class="btn-register-contact" id="registerContactOpen">
+            Create contacts
+          </button>
+        </div>
+        <div class="option_btn_range">
+          <button class="btn-range-contact" id="database">Contacts</button>
+          <span>120</span>
+        </div>
+      </div>
+
+      <section class="dashboard">
+        <div class="dashboard-container" id="dashboardContainer">
+          <div class="dashboard-nav-block" id="dashboardNavBlock">
+            <ul class="dashboard-nav">
+              <li><a href="#" class="link_active">Name</a></li>
+              <li><a href="#" class="link">Email</a></li>
+              <li><a href="#" class="link">Phone number</a></li>
+              <li><a href="#" class="link">Job title & company</a></li>
+            </ul>
+            <br />
+            <hr />
           </div>
-          <box-icon class="icon__image-container">
+        </div>
+
+        <div id="entries">
+          <button id="btnAddContact">Enregistrer</button>
+          <div>
             <img
-              src="./asset/pictures/contacts_2022_48dp.png"
+              src="./asset/pictures/profile_placeholder.png"
               alt="google-icon "
               class="google__icon"
             />
-          </box-icon>
-          <div>
-           <link rel="icon" href="https://www.gstatic.com/images/branding/product/2x/contacts_2022_48dp.png"/>
           </div>
-        <div>
-            <p class="page-title"> Contacts</p>
-            <input type="text" id="name-research" placeholder="search">
-            </div>
-            <div>
-        </div>
-    </nav>
-    <main class="option-container">
-        <div class="option_btn_register">
-            <button class="btn-register-contact" id="registerContact">Create contacts</button>
-            </div><br><br>
-            <div class="option_btn_range">
-                <box-icon></box-icon>
-            <button class="btn-range-contact" id="database">Contacts</button>
-            <p>120</p>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu"></i>
-        </div>
-        
-    </main>
-    <section class="dashboard">
-        <div class="dashboard-nav">
-            <nav>
-            <ul>
-                <li><a href= "#" class="link_active">Name</a></li>
-                <li><a href= "#"class="link">Email</a></li>
-                <li><a href= "#"class="link">Phone number</a></li>
-                <li><a href= "#"class="link">Job title & company</a></li>
-            </ul>
-        </nav>
-        </div>
-    </section>
-    <section>
-        <button id="btn-add-contact">Enregistrer</button> <br><br>
-        <div>
-            <img
-            src="./asset/pictures/profile_placeholder.png"
-            alt="google-icon "
-            class="google__icon"
-          />
-        </div>
-        
-        <form class="entries">
+
+          <form class="entries">
             <div id="entry1">
-                <box-icon>
-                    <link rel="icon" href="">
-                </box-icon>
-                <div id="input-wrapper">
-                    <input type="text" id="name-input" placeholder="Prénom">
-                </div>
-                <div id="contacts-list">
-                </div>
-               
-            </input>
+              <div id="input-wrapper">
+                <input type="text" id="prenom" placeholder="Prénom" />
+              </div>
+              <div id="contacts-list"></div>
             </div>
             <div id="entry2">
-               <label for="text"></label>
-               <input type="text" id="text" placeholder="Nom">
-            </div><br>
+              <label for="text"></label>
+              <input type="text" id="nom" placeholder="Nom" />
+            </div>
+            <br />
             <div class="entry3">
-               <label for="email"></label>
-               <input type="email" id="email" placeholder="E-mail">
-            </div><br>
+              <label for="email"></label>
+              <input type="email" id="email" placeholder="E-mail" />
+            </div>
+            <br />
             <div class="entry4">
-               <label for="text"></label>
-               <input type="text" id="text" placeholder="Téléphone">
-            </div>      
-    </form>
-    </section>
-<script src="index.js"></script>
-</body>
+              <label for="text"></label>
+              <input type="text" id="phone" placeholder="Téléphone" />
+            </div>
+            <br />
+            <div class="entry5">
+              <label for="text"></label>
+              <input type="text" id="fonction" placeholder="Fonction" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
 </html>

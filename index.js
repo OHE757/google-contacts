@@ -1,27 +1,43 @@
- document.querySelector('#btn-add-contact')
- document.addEventListener('click', function(){
-    const nameInput= document.querySelector('#name-input');
-    addContact(nameInput.value);
- });
+function createContact(prenom, nom, email, telephone, fonction) {
+  return `<ul class="dashboard-nav dashboard-list" id="dashboardList">
+  <li><a href="#" class="link_active">${prenom} ${nom}</a></li>
+   <li><a href="#" class="link_active">${email}</a></li>
+   <li><a href="#" class="link_active">${telephone}</a></li>
+   <li><a href="#" class="link_active">${fonction}</a></li>
+   </ul>`;
+}
 
- function addContact(fullName){
-if (!fullName || !fullName.trim ())
-return;
+registerContactOpen.addEventListener("click", () => {
+  dashboardNavBlock.style.display = "none";
+  entries.style.display = "block";
+});
 
-const contactDiv = document.createElement('div');
-contactDiv.className ='contact-entry';
+btnAddContact.addEventListener("click", () => {
+  if (
+    prenom.value == "" ||
+    nom.value == "" ||
+    email.value == "" ||
+    phone.value == "" ||
+    fonction.value == ""
+  ) {
+    return;
+  } else {
+    const contact = createContact(
+      prenom.value,
+      nom.value,
+      email.value,
+      phone.value,
+      fonction.value
+    );
 
-const nameInitialDiv = document.createElement('div');
-nameInitialDiv.className = 'name-initial';
-nameInitialDiv.textContent= fullName.charAt(0);
+    dashboardNavBlock.innerHTML += contact;
+    prenom.value = "";
+    nom.value = "";
+    email.value = "";
+    phone.value = "";
+    fonction.value = "";
 
-const fullNameDiv = document.createElement ('div');
-fullNameDiv.className= 'full-name';
-fullNameDiv.textContent = fullName;
-
-
-//append in order
-contactDiv.append(nameInitialDiv);
-contactDiv.append(fullNameDiv);
-document.querySelector('#contacts-list').append (contactDiv);
- }
+    dashboardNavBlock.style.display = "block";
+    entries.style.display = "none";
+  }
+});
