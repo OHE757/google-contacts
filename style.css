@@ -1,0 +1,148 @@
+/* -------------- Set Variables ----------- */
+:root {
+    /* colors  */
+    --blue-color: #C1E7FE;
+    --hover-blue-color: #F7FAFD;
+    --yellow-color: #ffd302;
+    --pink-color: #fe7261;
+    --blade-color: #5fa799;
+    --white-color: #fcfffd;
+    --black-color: #1a1e27;
+    --black-variant-color: #161616;
+    --black-degraded: #26554d;
+  
+    /* font size */
+    --default-fontSize: 1.15rem;
+    --title-fontSize: 3rem;
+    --menu-item-fontSize: var(--default-fontSize);
+    --section-title: 2rem;
+  
+    /* padding */
+    --default-padding: 2rem 4rem;
+    --button-padding: 0.8rem 1rem;
+    --section-padding: 9rem 0;
+    --description-padding: 10rem;
+  
+    /* Font Family */
+    --primary-font: "Poppins", sans-serif ;
+    --secondary-font: "Fraunces", sans-serif;
+  
+    /* Border */
+    --default-border-radius: 30px;
+  
+    /* Transition */
+    --transition: all 0.2s ease-in-out;
+  
+    /* Responsive */
+    @media screen and (max-width: 1024px) {
+      /* padding */
+      --default-padding: 1rem;
+      --button-padding: 0.8rem 1rem;
+      --section-padding: 5rem 0;
+      --description-padding: 10rem 5rem;
+  
+      /* font size */
+      --default-fontSize: 1.15rem;
+      --title-fontSize: 4rem;
+      --menu-item-fontSize: var(--default-fontSize);
+      --section-title: 2rem;
+    }
+  
+    @media screen and (max-width: 768px) {
+      /* padding */
+      --section-padding: 2rem 0;
+      --description-padding: 3rem;
+      /* font size */
+      --title-fontSize: 2rem;
+    }
+  }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.{
+    font-family: 'Poppins', sans-serif 
+}
+body {
+    padding: 24px;
+    background-color: var(--hover-blue-color)
+
+}
+.nav__list {
+    display:flex;
+    align-items: flex-start;
+  }
+  .nav__hamburger {
+    color: var(--black-variant-color)
+  }
+  .page-title {
+        font-size: 24px;
+        color: blue;
+    }
+    #input-wrapper{
+        margin: 24px 0;
+    }
+    input{
+        padding: 5px;
+        width:240px ;
+        max-width: 200px;
+    }
+    .option-container{
+        display: flex;
+        align-items: flex-start;  
+        max-width: 100rex;
+    }
+   .option_btn_register{
+    display: flex;
+    align-items: flex-start;
+        padding: 6px 12px;
+        margin: 6px 12px;
+        background-color: var(--blue-color);
+        color: white;
+        border-radius: 24px;
+    }
+    .btn-register-contact{
+      background-color: var(--blue-color);
+      border: 0ch;
+    }
+    .option_btn_range{
+    padding: 6px 12px;
+    background-color: var(--blue-color);
+    color: white;
+    border-radius: 24px;
+    }
+    .btn-range-contact{
+      background-color: var(--blue-color);
+      border: 0ch;
+
+    }
+    .contact-entry{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px;
+    }
+    .name-initial{
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: blue;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.7;
+    }
+    .full-name{
+        font-size: 24px;
+        margin-left: 8px;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 6px;
+        flex-grow: 1;
+    }
+    .dashboard{
+        display: flex;
+        align-content: flex-end;
+        max-width: 300em;
+        max-height: 300em;
+        padding: 24px;
+        background-color: var(--white-color)
+    }
